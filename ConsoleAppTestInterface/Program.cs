@@ -29,7 +29,7 @@ namespace ConsoleAppTestInterface
     ContinentsList continentslist = await apiService.GetAllContinents();
     Console.WriteLine(continentslist.Count);
     int id2 = continentslist.Last().Id;
-    await apiService.DeleteCountry(id2);
+    await apiService.DeleteContinent(id2);
     continentslist = await apiService.GetAllContinents();
     Console.WriteLine(continentslist.Count);
     Continents Continent = new Continents() { ContinentName = "TestContinent" };
