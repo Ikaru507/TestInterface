@@ -8,69 +8,70 @@ namespace ConsoleAppTestInterface
         static async Task Main(string[] args)
         {
             ApiService apiService = new ApiService();
-    CountriesList countrieslist = await apiService.GetAllCountries();
-    Console.WriteLine(countrieslist.Count);
-    int id = countrieslist.Last().Id;
-    await apiService.DeleteCountry(id);
-    countrieslist = await apiService.GetAllCountries();
-    Console.WriteLine(countrieslist.Count);
-    Countries country = new Countries() { CountryName = "TestCountry" };
-    await apiService.InsertCountry(country);
-    Countries MyCountry = countrieslist.First();
-    MyCountry.CountryName = "UpdatedCountryName";
-    await apiService.UpdateCountry(MyCountry);
-    Console.WriteLine();
+    //CountriesList countrieslist = await apiService.GetAllCountries();
+    //Console.WriteLine(countrieslist.Count);
+    //int id = countrieslist.Last().Id;
+    //await apiService.DeleteCountry(id);
+    //countrieslist = await apiService.GetAllCountries();
+    //Console.WriteLine(countrieslist.Count);
+    //Countries country = new Countries() { CountryName = "TestCountry" };
+    //await apiService.InsertCountry(country);
+    //Countries MyCountry = countrieslist.First();
+    //MyCountry.CountryName = "UpdatedCountryName";
+    //await apiService.UpdateCountry(MyCountry);
+    //Console.WriteLine();
 
 
 
 
 
 
-    ContinentsList continentslist = await apiService.GetAllContinents();
-    Console.WriteLine(continentslist.Count);
-    int id2 = continentslist.Last().Id;
-    await apiService.DeleteContinent(id2);
-    continentslist = await apiService.GetAllContinents();
-    Console.WriteLine(continentslist.Count);
-    Continents Continent = new Continents() { ContinentName = "TestContinent" };
-    await apiService.InsertContinent(Continent);
-    Continents MyContinent = continentslist.First();
-    MyContinent.ContinentName = "UpdatedContinentName";
-    await apiService.UpdateContinent(MyContinent);
-    Console.WriteLine();
+    //ContinentsList continentslist = await apiService.GetAllContinents();
+    //Console.WriteLine(continentslist.Count);
+    //int id2 = continentslist.Last().Id;
+    //await apiService.DeleteContinent(id2);
+    //continentslist = await apiService.GetAllContinents();
+    //Console.WriteLine(continentslist.Count);
+    //Continents Continent = new Continents() { ContinentName = "TestContinent" };
+    //await apiService.InsertContinent(Continent);
+    //Continents MyContinent = continentslist.First();
+    //MyContinent.ContinentName = "UpdatedContinentName";
+    //await apiService.UpdateContinent(MyContinent);
+    //Console.WriteLine();
 
 
 
 
 
-    LanguagesList languageslist = await apiService.GetAllLanguages();
-    Console.WriteLine(languageslist.Count);
-    int id3 = languageslist.Last().Id;
-    await apiService.DeleteLanguage(id3);
-    languageslist = await apiService.GetAllLanguages();
-    Console.WriteLine(languageslist.Count);
-    Languages Language = new Languages() { LanguageName = "TestLanguage" };
-    await apiService.InsertLanguage(Language);
-    Languages MyLanguage = languageslist.First();
-    MyLanguage.LanguageName = "UpdatedLanguageName";
-    await apiService.UpdateLanguage(MyLanguage);
-    Console.WriteLine();
+    //LanguagesList languageslist = await apiService.GetAllLanguages();
+    //Console.WriteLine(languageslist.Count);
+    //int id3 = languageslist.Last().Id;
+    //await apiService.DeleteLanguage(id3);
+    //languageslist = await apiService.GetAllLanguages();
+    //Console.WriteLine(languageslist.Count);
+    //Languages Language = new Languages() { LanguageName = "TestLanguage" };
+    //await apiService.InsertLanguage(Language);
+    //Languages MyLanguage = languageslist.First();
+    //MyLanguage.LanguageName = "UpdatedLanguageName";
+    //await apiService.UpdateLanguage(MyLanguage);
+    //Console.WriteLine();
 
 
 
 
-    WeatherList weatherlist = await apiService.GetAllWeather();
-    Console.WriteLine(weatherlist.Count);
-    int id4 = weatherlist.Last().Id;
-    await apiService.DeleteWeather(id4);
-    weatherlist = await apiService.GetAllWeather();
-    Console.WriteLine(countrieslist.Count);
-    Weather weather = new Weather() { WeatherName = "TestWeather" };
-    await apiService.InsertWeather(weather);
-    Weather MyWeather = weatherlist.First();
-    MyWeather.WeatherName = "UpdatedWeatherName";
-    await apiService.UpdateWeather(MyWeather);
-    Console.WriteLine();
+            WeatherList weatherlist = await apiService.GetAllWeather();
+            Console.WriteLine(weatherlist.Count);
+            Weather weather = new Weather() { WeatherName = "TestWeather" };
+            await apiService.InsertWeather(weather);
+            Weather MyWeather = weatherlist.First();
+            weatherlist = await apiService.GetAllWeather();
+            int id4 = weatherlist.Last().Id;
+            await apiService.DeleteWeather(id4);
+            weatherlist = await apiService.GetAllWeather();
+            Console.WriteLine(weatherlist.Count);
+            MyWeather.WeatherName = "UpdatedWeatherName";
+            await apiService.UpdateWeather(MyWeather);
+            Console.WriteLine();
 
 
 
@@ -79,7 +80,7 @@ namespace ConsoleAppTestInterface
     UserDetailsList userDetailslist = await apiService.GetAllUserDetails();
     Console.WriteLine(userDetailslist.Count);
     int id5 = userDetailslist.Last().Id;
-    await apiService.DeleteUserDetails(id);
+    await apiService.DeleteUserDetails(id5);
     userDetailslist = await apiService.GetAllUserDetails();
     Console.WriteLine(userDetailslist.Count);
     UserDetails UserDetail = new UserDetails() { UserName = "TestUserDetails" };
